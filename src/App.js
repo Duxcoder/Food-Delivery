@@ -1,33 +1,52 @@
-import './style.sass'
+import styles from './style.module.sass'
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import Logo from './components/header/logo/logo';
+import Search from './components/header/search/search';
+import Navigation from './components/header/navigation/navigation';
+const headerPages = [
+  {
+    name:'Restaurants',
+    url:'/'
+  },
+  {
+    name:'Deals',
+    url:'/'
+  },
+  {
+    name:'My orders',
+    url:'/'
+  }
+];
 
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Row>
-          <Col>
-          <Container>
-            <Row>
+      <Container fluid>
+        <Row className={styles.header}>
+          {/* <Col>
+            <Row> */}
+            
+            
               <Col className='d-flex justify-content-start align-items-center'>
-                <div>Logo</div>
-                <div>Search</div>
+                <Logo></Logo>
+                <Search placeholder='Search'></Search>
               </Col>
-            </Row>
-            </Container>
-          </Col>
-          <Col>
-          <Container>
-            <Row >
+            
+            
+            {/* </Row>
+          </Col> */}
+          {/* <Col> */}
+            {/* <Row > */}
               <Col className='d-flex justify-content-end align-items-center'>
-              <div>Logo</div>
+              <Navigation pages={headerPages} separatePage={headerPages[2]}></Navigation>
               <div>Cart</div>
               <div>Profile</div>
               </Col>
-            </Row>
-            </Container>
-          </Col>
+            {/* </Row> */}
+          {/* </Col> */}
         </Row>
+      </Container>
+      <Container>
         <Row>
           <Col className='d-flex justify-content-between align-items-center'>
           <div>Banner 1</div>
