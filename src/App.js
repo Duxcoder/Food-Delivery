@@ -1,11 +1,15 @@
 import styles from './style.module.sass'
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import Data from './database';
+import { Container, Row, Col } from 'react-bootstrap';
 import Logo from './components/header/logo/logo';
 import Search from './components/header/search/search';
 import Navigation from './components/header/navigation/navigation';
 import Cart from './components/header/cart/cart';
 import ProfileIcon from './components/header/profileIcon/profileIcon';
+import Menu from './components/menu/menu'
 import Banner from './components/banners/banner';
+import EmojiIcons from './components/emojiIcons/emojiIcons';
+import Caption from './components/caption/caption';
 const headerPages = [
   {
     name:'Restaurants',
@@ -44,33 +48,37 @@ function App() {
       <Container>
         <Row>
           <Col className='d-flex justify-content-between align-items-center g-4'>
+          <Banner url='/img/cake.png' 
+                  alt='cake'
+                  description = 'All deserts'
+                  title = '20% OFF'
+                  category = 'Deserty'
+                  height = '188px'
+                  bgColor = 'blue'
+                  >
+          </Banner> 
           <Banner url='/img/burger.png' 
                   alt='burger'
                   description = 'Big Burgers'
                   title = '50% OFF'
                   category = 'Foodies'
-                  ></Banner>
-          <Banner></Banner>
+                  height = '188px'
+                  bgColor = 'orange'
+                  >     
+          </Banner>
           </Col>
         </Row>
       </Container>
       <Container>
         <Row>
-          <Col className='d-flex justify-content-between align-items-center'>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-          </Col>
+          <Menu icons = {EmojiIcons()} labels = {Data.menu}></Menu>
         </Row>
       </Container>
       <Container>
         <Row>
-          <Col className='d-flex justify-content-start align-items-center'>Title block</Col>
+          <Col className='d-flex justify-content-start align-items-center'>
+            <Caption caption = 'Nearby restaurants'></Caption>
+          </Col>
         </Row>
         <Row>
           <Col className='d-flex flex-wrap'>

@@ -5,13 +5,13 @@ import { Row, Col } from "react-bootstrap";
 
 export default function Banner(props) {
     return (
-<Row className={styles.banner_wrapper}>
+<Row className={styles.banner_wrapper} id = {props.bgColor === 'blue' ? styles.bgColorBlue : styles.bgColorOrange}>
         <Col>
-            <img src={props.url} alt={props.alt}></img>
+            <img src={props.url} alt={props.alt} ></img>
         </Col>  
-        <Col>{props.description}
-             {props.title}
-             {props.category}
+        <Col><div className={styles.descr}>{props.description}</div>
+        <div className={styles.title}>{props.title}</div>
+        <div className={styles.category}>{props.category}</div>
         </Col>
     </Row>
 
