@@ -10,6 +10,7 @@ import Menu from './components/menu/menu'
 import Banner from './components/banners/banner';
 import EmojiIcons from './components/emojiIcons/emojiIcons';
 import Caption from './components/caption/caption';
+import Cards from './components/cards/cards';
 const headerPages = [
   {
     name:'Restaurants',
@@ -81,15 +82,7 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Col className='d-flex flex-wrap'>
-            <div>menu block item 1</div>
-            <div>menu block item 2</div>
-            <div>menu block item 3</div>
-            <div>menu block item 4</div>
-            <div>menu block item 5</div>
-            <div>menu block item 6</div>
-
-          </Col>
+          <Cards url='/img/cardImg/Royal.jpg'></Cards>
         </Row>
       </Container>
     </div>

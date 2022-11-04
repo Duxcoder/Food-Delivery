@@ -1,0 +1,41 @@
+@import "../../../styles/default"
+
+.card
+    background: #FFFFFF
+    border: 1px solid #EDEEF2
+    border-radius: 16px
+    width: 350px
+    height: 276px
+    overflow: hidden
+    img
+        pointer-events: none
+    .bottom_card
+
+        .menu_item
+            height: 24px
+            width: auto
+            padding: 4px 10px
+            color: #545563
+            background: #EDEEF2
+            border-radius: 100px 
+
+        .min_price
+            .minutes
+                display: inline-block
+
+            .price
+                display: inline-block
+    .title_card
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 16px 16px 6px
+
+        button 
+            color: #C7C8D2
+            &:hover 
+                color: $active-color
+
+        .title
+            font-weight: 700
+            font-size: 18px
