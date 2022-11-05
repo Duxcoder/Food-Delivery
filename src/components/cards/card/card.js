@@ -15,18 +15,20 @@ export default function Card(props) {
                 </div>
                 <div className={styles.min_price}>
                     <div className={styles.minutes}>
-                        <span><FiClock></FiClock>
+                        <span>
+                            <FiClock className={styles.iconTimes}></FiClock>
                             30-40 min
                         </span>
                     </div>
                     <div className={styles.price}>
-                        <span><VscCircleFilled></VscCircleFilled>
+                        <span>
+                            <VscCircleFilled className={styles.iconPoint}></VscCircleFilled>
                             $32 min sum
                         </span>
                     </div>
                 </div>
                 <span className={styles.menu_item}>
-                 {props.icons} Sushi
+                 {props.icons.sushi} Sushi
                 </span>
             </div>
         </div>

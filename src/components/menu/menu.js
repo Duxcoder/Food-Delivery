@@ -3,10 +3,15 @@ import { Col } from "react-bootstrap";
 import styles from './style.module.sass'
 
 export default function Menu(props) {
-    const renderItem = (icon, arrItemsMenu) => {
+
+    const renderItem = (icons, arrItemsMenu) => {
         return arrItemsMenu.map(elem => {
-            console.log(elem.icon)
-            return <button className={styles.item} key={elem.id}> {icon[elem.icon]} <span>{elem.name}</span></button>
+            return (
+                <button className={styles.item} key={elem.id}> 
+                    {icons[elem.target]} 
+                    <span>{elem.name}</span>
+                </button>
+            )
         });
     }
     return (

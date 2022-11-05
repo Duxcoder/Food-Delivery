@@ -8,7 +8,7 @@ import Cart from './components/header/cart/cart';
 import ProfileIcon from './components/header/profileIcon/profileIcon';
 import Menu from './components/menu/menu'
 import Banner from './components/banners/banner';
-import EmojiIcons from './components/emojiIcons/emojiIcons';
+import {EmojiIcons} from './components/emojiIcons/emojiIcons';
 import Caption from './components/caption/caption';
 import Cards from './components/cards/cards';
 const headerPages = [
@@ -72,7 +72,7 @@ function App() {
       </Container>
       <Container>
         <Row>
-          <Menu icons = {EmojiIcons()} labels = {Data.menu}></Menu>
+          <Menu icons = {EmojiIcons} labels = {Data.menu}></Menu>
         </Row>
       </Container>
       <Container>
@@ -82,7 +82,7 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Cards url='/img/cardImg/Royal.jpg'></Cards>
+          <Cards url='/img/cardImg/Royal.jpg' icons = {EmojiIcons} ></Cards>
         </Row>
       </Container>
     </div>

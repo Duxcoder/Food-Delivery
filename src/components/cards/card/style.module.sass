@@ -1,6 +1,7 @@
 @import "../../../styles/default"
 
 .card
+    margin: 16px 0 30px
     background: #FFFFFF
     border: 1px solid #EDEEF2
     border-radius: 16px
@@ -20,11 +21,34 @@
             border-radius: 100px 
 
         .min_price
+            display: flex
+            flex-direction: row
+            padding-left: 16px
+            font-weight: 600
+            font-size: 12px
+            color: #83859C
+
             .minutes
-                display: inline-block
+                span
+                    display: flex
+                    align-items: center
+                    .iconTimes
+                        width: 12px
+                        height: 12px
+                        color: #C7C8D2
+                        margin-right: 6px
+                        
 
             .price
-                display: inline-block
+                span
+                    display: flex
+                    align-items: center
+                    .iconPoint
+                        width: 6px
+                        height: 6px
+                        color: #4E60FF
+                        margin: 0 6px
+
     .title_card
         display: flex
         align-items: center

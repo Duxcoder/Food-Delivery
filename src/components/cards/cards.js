@@ -5,7 +5,7 @@ import Card from "./card/card";
 export default function Cards(props) {
     return (
         <Col className='d-flex flex-wrap'>
-            <Card url = {props.url}></Card>
+            <Card url = {props.url} icons = {props.icons}></Card>
         </Col>
     )
 }

@@ -6,17 +6,14 @@ import {ReactComponent as Cake} from './icon/cake.svg'
 import {ReactComponent as Meat} from './icon/meat.svg'
 import {ReactComponent as Sushi} from './icon/sushi.svg'
 
-
-const EmojiIcons = () => {
-    return {
-    burger: <Burger></Burger>,
-    broccoli: <Broccoli></Broccoli>,
-    cake: <Cake></Cake>,
-    pizza: <Pizza></Pizza>,
-    meat: <Meat></Meat>,
-    sushi: <Sushi></Sushi>
+const EmojiIcons = {
+        burger: <Burger></Burger>,
+        broccoli: <Broccoli></Broccoli>,
+        cake: <Cake></Cake>,
+        pizza: <Pizza></Pizza>,
+        meat: <Meat></Meat>,
+        sushi: <Sushi></Sushi>
     }
-}
 
-export default  EmojiIcons
+export {EmojiIcons}
 
