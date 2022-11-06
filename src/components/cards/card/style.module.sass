@@ -1,29 +1,59 @@
 @import "../../../styles/default"
 
 .card
+    position: relative
+    display: flex
+    flex-direction: column
     margin: 16px 0 30px
     background: #FFFFFF
     border: 1px solid #EDEEF2
     border-radius: 16px
-    width: 350px
+    min-width: 240px
     height: 276px
     overflow: hidden
+    .featured
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 8px 16px
+        gap: 8px
+        position: absolute
+        width: 94px
+        height: 32px
+        right: 0px
+        top: 0px
+        background: #4E60FF
+        border-radius: 0px 16px
+        color: #fff
+        font-weight: 700
+        font-size: 11px    
     img
+        background-size: cover
         pointer-events: none
+        width: auto
+        height: 50%
     .bottom_card
-
+        padding: 0px 16px
         .menu_item
+            display: inline-flex
+            align-items: center
             height: 24px
             width: auto
-            padding: 4px 10px
+            padding: 0px 10px
+            font-size: 12px;
             color: #545563
             background: #EDEEF2
-            border-radius: 100px 
+            border-radius: 100px
+            margin-top: 14px
+            line-height: 24px
+            img
+                width: 12px
+                height: 12px
+                margin-right: 4px
 
         .min_price
             display: flex
             flex-direction: row
-            padding-left: 16px
             font-weight: 600
             font-size: 12px
             color: #83859C
@@ -53,7 +83,7 @@
         display: flex
         align-items: center
         justify-content: space-between
-        padding: 16px 16px 6px
+        padding: 16px 0px 6px
 
         button 
             color: #C7C8D2
@@ -61,5 +91,5 @@
                 color: $active-color
 
         .title
-            font-weight: 700
+            font-weight: 600
             font-size: 18px

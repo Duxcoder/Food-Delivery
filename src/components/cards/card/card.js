@@ -7,7 +7,9 @@ import { VscCircleFilled } from "react-icons/vsc";
 export default function Card(props) {
     return (
         <div className={styles.card}>
-            <img src={props.url} alt={props.alt}></img>
+            
+            <img src={props.url} alt={props.alt}/>
+            <div className={styles.featured}>FEATURED</div>
             <div className={styles.bottom_card}>
                 <div className={styles.title_card}>
                     <div className={styles.title}>Royal Sushi House</div>
@@ -17,18 +19,18 @@ export default function Card(props) {
                     <div className={styles.minutes}>
                         <span>
                             <FiClock className={styles.iconTimes}></FiClock>
-                            30-40 min
+                            {props.time}
                         </span>
                     </div>
                     <div className={styles.price}>
                         <span>
                             <VscCircleFilled className={styles.iconPoint}></VscCircleFilled>
-                            $32 min sum
+                            {props.time}
                         </span>
                     </div>
                 </div>
                 <span className={styles.menu_item}>
-                 {props.icons.sushi} Sushi
+                    {props.icons.sushi} {props.tags}
                 </span>
             </div>
         </div>
