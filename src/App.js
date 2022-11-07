@@ -46,9 +46,9 @@ function App() {
             <Caption caption = 'Nearby restaurants'></Caption>
           </Col>
         </Row>
-        <Row>
+        
           <Cards></Cards>
-        </Row>
+        
       </Container>
     </div>
   );

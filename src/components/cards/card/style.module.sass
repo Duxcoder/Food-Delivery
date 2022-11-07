@@ -8,12 +8,13 @@
     background: #FFFFFF
     border: 1px solid #EDEEF2
     border-radius: 16px
-    min-width: 240px
-    height: 276px
+    max-width: 350px
+    height: auto
     overflow: hidden
     .featured
         display: flex
         flex-direction: row
+        justify-content: center
         align-items: center
         padding: 8px 16px
         gap: 8px
@@ -28,10 +29,10 @@
         font-weight: 700
         font-size: 11px    
     img
-        background-size: cover
+        object-fit: cover
         pointer-events: none
-        width: auto
-        height: 50%
+        width: 100%
+        height: 100%
     .bottom_card
         padding: 0px 16px
         .menu_item

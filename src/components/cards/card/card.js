@@ -2,12 +2,13 @@ import React from "react";
 import styles from './style.module.sass'
 import { FiShoppingBag, FiClock } from "react-icons/fi";
 import { VscCircleFilled } from "react-icons/vsc";
+import { Col } from "react-bootstrap";
 
 
 export default function Card(props) {
     return (
+    <Col xl={3} lg={4} md={6} sm={6} className="justify-content-center d-flex"> 
         <div className={styles.card}>
-            
             <img src={props.url} alt={props.alt}/>
             <div className={styles.featured}>FEATURED</div>
             <div className={styles.bottom_card}>
@@ -34,6 +35,7 @@ export default function Card(props) {
                 </span>
             </div>
         </div>
+    </Col>
     )
        
 }
