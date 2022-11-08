@@ -3,7 +3,7 @@ import styles from './style.module.sass'
 import {Container, Row, Col } from 'react-bootstrap';
 import Logo from './logo/logo';
 import Search from './search/search';
-import Navigation from './navigation/navigation';
+import NavBar from './navBar/navBar';
 import Cart from './cart/cart';
 import ProfileIcon from './profileIcon/profileIcon';
 
@@ -23,18 +23,34 @@ const headerPages = [
   ];
 
  function Header () {
+
+  // const checkWidthWindow = () => {
+  //   console.log(window.innerWidth)
+  //   return window.innerWidth >= 840
+  // }
+  // const renderSearch = () => {
+  //   return (
+  //     <Col xs={6} className={styles.searchBlock}>
+  //       <Search placeholder='Search'></Search>
+  //     </Col>
+  //   )
+  // }
         return (
     <header>
       <Container>
           <Row className={styles.header}>
-            <Col className='d-flex justify-content-start align-items-center'>
+            <Col className='d-flex justify-content-start align-items-center '>
               <Row>
-                <Col><Logo></Logo></Col>
-                <Col className={styles.searchBlock}><Search placeholder='Search'></Search></Col>
+                <Col xs={3}>
+                  <Logo></Logo>
+                </Col>
+                <Col xs={6} className={styles.searchBlock}>
+                  <Search placeholder='Search'></Search>
+                </Col>
               </Row>
             </Col>
             <Col className='d-flex justify-content-end align-items-center'>
-              <Navigation pages={headerPages} separatePage={headerPages[2]}></Navigation>
+              <NavBar pages={headerPages} separatePage={headerPages[2]}></NavBar>
               <Cart></Cart>
               <ProfileIcon alt={'avatar'} url={'/user/img.png'}></ProfileIcon>
             </Col>

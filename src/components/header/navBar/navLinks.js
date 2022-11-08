@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './style.module.sass'
 
-export default function Navigation(props) {
+export default function NavLinks(props) {
 
 const renderLinks = () => {
     if (props.separatePage) {
@@ -32,11 +32,9 @@ const createLinkLi = (nameClass, key, href, label, separatePage = false) => {
 }
     return ( 
         <>
-        <nav>
             <ul>
                 {renderLinks()}
             </ul>
-        </nav>
         </>
     )
 }

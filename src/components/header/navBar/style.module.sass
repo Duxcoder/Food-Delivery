@@ -1,0 +1,55 @@
+
+.navigation
+    ul
+        margin: 0 !important
+
+    li 
+        list-style-type: none
+        display: inline-block
+        height: 32px
+        width: auto
+        .page
+            font-weight: 600
+            font-size: 14px
+            color: #2B2B43
+            padding: 4px 14px 
+            text-decoration: none
+            line-height: 32px
+            gap: 10px
+            letter-spacing: 0.1px
+
+.separate
+    border-left: 1px solid #EDEEF2
+
+.navigationMobile
+    display: none;
+
+@media screen and (max-width:760px) 
+    .navigationMobile 
+        display: flex
+        .hamburgerWrapper
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 44px
+            height: 44px
+            background: #EDEEF2
+            border-radius: 16px
+            nav
+                ul
+                    display: flex
+                    flex-direction: column
+                    position: absolute
+                    top: 80px
+                    right: 0
+                    width: 100%
+                    background: #181818
+            .hamburgerIcon
+                width: 16px
+                height: 16px
+                color: #83859C
+    .navigation
+        display: none
+
+
+
