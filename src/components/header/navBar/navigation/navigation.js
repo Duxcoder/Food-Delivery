@@ -5,7 +5,8 @@ export const Navigation = (props) => {
     return (
         <nav className={styles.navigation}>
             <NavLinks separatePage = {props.separatePage}
-                      pages = {props.pages}/>
+                      pages = {props.pages}
+                      classLink = {'page'}/>
         </nav>
     );
 };

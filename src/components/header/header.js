@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import styles from './style.module.sass'
 import {Container, Row, Col } from 'react-bootstrap';
 import Logo from './logo/logo';
@@ -22,7 +22,13 @@ const headerPages = [
     }
   ];
 
+  // const mobileNavigation = (data) => {
+  //   return data
+  // }
+
  function Header () {
+  
+
 
   // const checkWidthWindow = () => {
   //   console.log(window.innerWidth)
@@ -35,8 +41,9 @@ const headerPages = [
   //     </Col>
   //   )
   // }
-        return (
+  return (
     <header>
+      <div className={styles.borderBottom}>
       <Container>
           <Row className={styles.header}>
             <Col className='d-flex justify-content-start align-items-center '>
@@ -55,6 +62,14 @@ const headerPages = [
               <ProfileIcon alt={'avatar'} url={'/user/img.png'}></ProfileIcon>
             </Col>
           </Row>
+      </Container>
+      </div>
+      <Container>
+        <Row>
+          <Col>
+          navMobile
+          </Col>
+        </Row>
       </Container>
     </header>
         )
