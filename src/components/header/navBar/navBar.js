@@ -12,6 +12,7 @@ export default function NavBar(props) {
         <NavigationMobile
                     separatePage = {props.separatePage}
                     pages = {props.pages}
+                    hamburgerClick = {props.hamburgerClick}
                    />
         </>
     )

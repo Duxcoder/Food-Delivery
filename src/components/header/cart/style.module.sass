@@ -11,17 +11,24 @@ $clrActive: #4E60FF
     border-radius: 16px
     margin: 0 10px
     cursor: pointer
+    border: solid 2px #fff
+    transition: 0.3s
+
+    &:hover
+       border: solid 2px $clrActive
+            
     .icon
         width: 18px
         height: 18px
         color: $clrActive
 
+
 .cart_counter
     display: flex
     align-items: center
     justify-content: center
-    top: -0.3em
-    right: -0.3em
+    top: -0.4em
+    right: -0.4em
     position: absolute
     width: 20px
     height: 20px
@@ -33,3 +40,5 @@ $clrActive: #4E60FF
     font-weight: 700
     font-size: 10px
     line-height: 14px
+   
+        

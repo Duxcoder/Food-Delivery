@@ -6,7 +6,7 @@ export default function NavLinks(props) {
 const renderLinks = () => {
     if (props.separatePage) {
         const LinksWithoutSeparatePage = props.pages.filter(item => item !== props.separatePage)
-        const separatePage = createLinkLi(styles[props.classLink], props.pages.length, props.separatePage.url, props.separatePage.name, true)
+        const separatePage = createLinkLi(styles[props.classLink], props.pages.length, props.separatePage.url, props.separatePage.name, !props.mobile)
         return [...iterationToLinks(LinksWithoutSeparatePage), separatePage]
     } else {
         return iterationToLinks(props.pages)

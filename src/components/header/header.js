@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {Component, useState} from "react"
 import styles from './style.module.sass'
 import {Container, Row, Col } from 'react-bootstrap';
 import Logo from './logo/logo';
@@ -6,6 +6,7 @@ import Search from './search/search';
 import NavBar from './navBar/navBar';
 import Cart from './cart/cart';
 import ProfileIcon from './profileIcon/profileIcon';
+import { ActiveNavigationMobile } from "./navBar/navigationMobile/navigationMobile";
 
 const headerPages = [
     {
@@ -22,26 +23,22 @@ const headerPages = [
     }
   ];
 
-  // const mobileNavigation = (data) => {
-  //   return data
-  // }
 
- function Header () {
-  
+ export default class Header extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      hamburgerNavigation: false
+    }
+  }
 
+hamburgerClick = () => {
+  this.setState(prevState => ({hamburgerNavigation: !prevState.hamburgerNavigation}))
+}
 
-  // const checkWidthWindow = () => {
-  //   console.log(window.innerWidth)
-  //   return window.innerWidth >= 840
-  // }
-  // const renderSearch = () => {
-  //   return (
-  //     <Col xs={6} className={styles.searchBlock}>
-  //       <Search placeholder='Search'></Search>
-  //     </Col>
-  //   )
-  // }
+  render (){
   return (
+
     <header>
       <div className={styles.borderBottom}>
       <Container>
@@ -57,7 +54,7 @@ const headerPages = [
               </Row>
             </Col>
             <Col className='d-flex justify-content-end align-items-center'>
-              <NavBar pages={headerPages} separatePage={headerPages[2]}></NavBar>
+              <NavBar hamburgerClick={this.hamburgerClick} pages={headerPages} separatePage={headerPages[2]}></NavBar>
               <Cart></Cart>
               <ProfileIcon alt={'avatar'} url={'/user/img.png'}></ProfileIcon>
             </Col>
@@ -67,12 +64,10 @@ const headerPages = [
       <Container>
         <Row>
           <Col>
-          navMobile
+            {this.state.hamburgerNavigation ? <ActiveNavigationMobile separatePage={headerPages[2]} pages={headerPages}></ActiveNavigationMobile> : null}
           </Col>
         </Row>
       </Container>
     </header>
-        )
+        )}
  }
-
- export default Header

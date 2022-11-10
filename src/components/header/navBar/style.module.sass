@@ -28,9 +28,13 @@ nav.navigationMobile
     nav.navigationMobile 
         display: flex
         .hamburgerIcon
-                width: 16px
-                height: 16px
-                color: #83859C
+            width: 16px
+            height: 16px
+            color: #83859C
+            transition: 0.3s
+
+            &:hover
+                color: #fff
         .hamburgerWrapper
             display: flex
             align-items: center
@@ -39,7 +43,15 @@ nav.navigationMobile
             height: 44px
             background: #EDEEF2
             border-radius: 16px
+            cursor: pointer
+            transition: 0.3s
+
+            &:hover
+                background: #365fff
+                .hamburgerIcon
+                    color: #fff
         .navMobileWrapper
+            width: 100%
             ul
                 padding-left: 0 !important
                 margin: 24px 0 0 0 !important
