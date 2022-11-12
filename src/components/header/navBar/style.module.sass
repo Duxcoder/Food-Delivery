@@ -18,15 +18,16 @@ nav.navigation
             gap: 10px
             letter-spacing: 0.1px
 
-.separate
-    border-left: 1px solid #EDEEF2
+    .separate
+        border-left: 1px solid #EDEEF2
 
 nav.navigationMobile
-    display: none;
+    display: none
 
 @media screen and (max-width:990px) 
     nav.navigationMobile 
         display: flex
+        align-items: center
         .hamburgerIcon
             width: 16px
             height: 16px
@@ -83,7 +84,11 @@ nav.navigationMobile
                         &:hover
                             color: #fff
                             background: #4f60ff
-            
+        .separateMobile
+            margin: 0 16px
+            height: 32px
+            border-left: 1px solid #EDEEF2
+
     nav.navigation
         display: none
 

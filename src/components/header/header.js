@@ -3,8 +3,9 @@ import styles from './style.module.sass'
 import {Container, Row, Col } from 'react-bootstrap';
 import Logo from './logo/logo';
 import Search from './search/search';
-import NavBar from './navBar/navBar';
+import Navigation from './navBar/navigation/navigation'
 import Cart from './cart/cart';
+import { NavigationMobile } from "./navBar/navigationMobile/navigationMobile";
 import ProfileIcon from './profileIcon/profileIcon';
 import { ActiveNavigationMobile } from "./navBar/navigationMobile/navigationMobile";
 
@@ -54,9 +55,14 @@ hamburgerClick = () => {
               </Row>
             </Col>
             <Col className='d-flex justify-content-end align-items-center'>
-              <NavBar hamburgerClick={this.hamburgerClick} pages={headerPages} separatePage={headerPages[2]}></NavBar>
+              <Navigation pages={headerPages} separatePage={headerPages[2]}/>
               <Cart></Cart>
               <ProfileIcon alt={'avatar'} url={'/user/img.png'}></ProfileIcon>
+              <NavigationMobile
+                    separatePage = {headerPages[2]}
+                    pages = {headerPages}
+                    hamburgerClick = {this.hamburgerClick}
+                   />
             </Col>
           </Row>
       </Container>

@@ -8,6 +8,7 @@ export const NavigationMobile = (props) => {
     const close = <IoClose className={styles.hamburgerIcon}/>   
     return (
         <nav className={styles.navigationMobile}>
+        <div className={styles.separateMobile}></div>
             <div className={styles.hamburgerWrapper}
                  onClick={() => {setOpen(!open); props.hamburgerClick()}}>
             {open ? close : hamurger}

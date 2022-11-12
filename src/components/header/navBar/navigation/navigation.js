@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../style.module.sass'
 import NavLinks from '../navLinks';
-export const Navigation = (props) => {
+const Navigation = (props) => {
     return (
         <nav className={styles.navigation}>
             <NavLinks separatePage = {props.separatePage}
@@ -10,3 +10,5 @@ export const Navigation = (props) => {
         </nav>
     );
 };
+
+export default Navigation
