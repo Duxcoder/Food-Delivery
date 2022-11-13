@@ -7,11 +7,17 @@ import Banner from './components/banners/banner';
 import {EmojiIcons} from './components/emojiIcons/emojiIcons';
 import Caption from './components/caption/caption';
 import Cards from './components/cards/cards';
-
+// import LoginPage from './components/loginPage/loginPage'
+// import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+  //  <Router>
+  //     <Routes>
+  //       <Route path='/login' element={<LoginPage/>}/>
+  //       <Route path='/' element={<LoginPage/>}/>
+  //     </Routes>
+     <div className="App">
       <Header></Header>
       <Container>
         <Row className='d-flex justify-content-between align-items-center'>
@@ -51,6 +57,7 @@ function App() {
         
       </Container>
     </div>
+  //  </Router>
   );
 }
 

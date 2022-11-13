@@ -45,11 +45,11 @@ hamburgerClick = () => {
       <Container>
           <Row className={styles.header}>
             <Col className='d-flex justify-content-start align-items-center '>
-              <Row>
+              <Row className={styles.logoSearch}>
                 <Col xs={3}>
                   <Logo></Logo>
                 </Col>
-                <Col xs={6} className={styles.searchBlock}>
+                <Col xs={9} className={styles.searchBlock}>
                   <Search placeholder='Search'></Search>
                 </Col>
               </Row>
