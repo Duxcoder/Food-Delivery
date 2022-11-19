@@ -3,9 +3,18 @@ import styles from './style.module.sass'
 import { FiShoppingBag, FiClock } from "react-icons/fi";
 import { VscCircleFilled } from "react-icons/vsc";
 import { Col } from "react-bootstrap";
+import { EmojiIcons } from "../../emojiIcons/emojiIcons";
 
 
 export default function Card(props) {
+    const renderTags = (icons) => {
+        return icons.map(item => {
+            return <span className={styles.menu_item}>
+                    {EmojiIcons[item.toLowerCase()]} {item}
+                   </span>
+        })
+    }
+
     return (
     <Col xl={3} lg={4} sm={6} className="justify-content-center d-flex"> 
         <div className={styles.card}>
@@ -30,10 +39,8 @@ export default function Card(props) {
                         </span>
                     </div>
                 </div>
-                <span className={styles.menu_item}>
-                    {props.icons.sushi} {props.tags}
-                </span>
-            </div>
+                    {renderTags(props.icons)}
+           </div>
         </div>
     </Col>
     )
