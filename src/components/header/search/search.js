@@ -3,9 +3,7 @@ import styles from './style.module.sass'
 import {FiSearch} from 'react-icons/fi'
 export default function Search(props) {
     const [click, setClick] = useState(false)
-    const focusSearch = () => {
-        setClick(true)
-    }
+    const focusSearch = () => setClick(true)
     useEffect(() => {
         const closeDrop = e => {
             if (e.path[0].tagName !== 'INPUT'){
