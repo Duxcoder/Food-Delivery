@@ -8,8 +8,8 @@ import { EmojiIcons } from "../../emojiIcons/emojiIcons";
 
 export default function Card(props) {
     const renderTags = (icons) => {
-        return icons.map(item => {
-            return <span className={styles.menu_item}>
+        return icons.map((item, i)=> {
+            return <span className={styles.menu_item} key = {i}>
                     {EmojiIcons[item.toLowerCase()]} {item}
                    </span>
         })

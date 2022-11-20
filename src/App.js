@@ -1,4 +1,5 @@
 import styles from './style.module.sass'
+import React, {useState} from 'react';
 import Data from './database';
 import { Container, Row, Col } from 'react-bootstrap';
 import Header from './components/header/header'
@@ -11,6 +12,9 @@ import Cards from './components/cards/cards';
 // import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
+  const [filter, installFilter] = useState([]);
+  const setFilter = activeCategory => installFilter(activeCategory);
+
   return (
   //  <Router>
   //     <Routes>
@@ -43,7 +47,7 @@ function App() {
       </Container>
       <Container>
         <Row>
-          <Menu icons = {EmojiIcons} labels = {Data.menu}></Menu>
+          <Menu icons = {EmojiIcons} labels = {Data.menu} filter = {setFilter}></Menu>
         </Row>
       </Container>
       <Container>
@@ -53,7 +57,7 @@ function App() {
           </Col>
         </Row>
         
-          <Cards></Cards>
+          <Cards filter = {filter}></Cards>
         
       </Container>
     </div>
