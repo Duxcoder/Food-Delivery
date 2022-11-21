@@ -13,7 +13,7 @@ export default function Cards(props) {
             }
             let data = []
             Data.cards.forEach(elem => {
-                  if (elem.category.sort().join().includes(arrFilterCategory.sort().join())) {
+                  if (elem.category.sort().join().toLocaleLowerCase().includes(arrFilterCategory.sort().join().toLocaleLowerCase())) {
                         data.push(elem)
                   }
             })
@@ -34,7 +34,7 @@ export default function Cards(props) {
             })
       }
       return (
-            <Row className='d-flex flex-wrap justify-content-between'>
+            <Row className='d-flex flex-wrap justify-content-start'>
                   {renderCard(dataWithFilter())}
             </Row>
       )
