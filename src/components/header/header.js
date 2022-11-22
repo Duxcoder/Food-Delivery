@@ -56,7 +56,7 @@ hamburgerClick = () => {
             </Col>
             <Col className='d-flex justify-content-end align-items-center'>
               <Navigation pages={headerPages} separatePage={headerPages[2]}/>
-              <Cart></Cart>
+              <Cart counter={this.props.cart}></Cart>
               <ProfileIcon alt={'avatar'} url={'/user/img.png'}></ProfileIcon>
               <NavigationMobile
                     separatePage = {headerPages[2]}

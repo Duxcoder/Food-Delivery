@@ -24,12 +24,15 @@ export default function Cards(props) {
             return data.map(item => {
                   const { title, url, category, time, price, id } = item;
                   return <Card title={title}
+                        shop={item}
                         url={url}
                         icons={category}
                         time={time}
                         price={price}
                         tags={category}
                         key={id}
+                        cart={props.cart}
+                        addToCart={props.addToCart}
                   ></Card>
             })
       }

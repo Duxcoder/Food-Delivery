@@ -13,8 +13,10 @@ import Cards from './components/cards/cards';
 
 function App() {
   const [filter, installFilter] = useState([]);
-  const setFilter = activeCategory => installFilter(activeCategory);
+  const [cart, setCart] = useState([]);
 
+  const setFilter = activeCategory => installFilter(activeCategory);
+  const addtoCart = ([shop, modify]) => modify ? setCart([...cart, shop]) : setCart(cart.filter((elem) => {return elem.id !== shop.id}))
   return (
   //  <Router>
   //     <Routes>
@@ -22,7 +24,7 @@ function App() {
   //       <Route path='/' element={<LoginPage/>}/>
   //     </Routes>
      <div className="App">
-      <Header></Header>
+      <Header cart = {cart}/>
       <Container>
         <Row className='d-flex justify-content-between align-items-center'>
             <Banner url='/img/cake.png' 
@@ -57,7 +59,7 @@ function App() {
           </Col>
         </Row>
         
-          <Cards filter = {filter}></Cards>
+          <Cards cart = {cart.length} addToCart = {addtoCart} filter = {filter}></Cards>
         
       </Container>
     </div>

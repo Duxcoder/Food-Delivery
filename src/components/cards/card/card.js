@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from './style.module.sass'
 import { FiShoppingBag, FiClock } from "react-icons/fi";
 import { VscCircleFilled } from "react-icons/vsc";
@@ -22,7 +22,6 @@ export default function Card(props) {
             </span>
         })
     }
-
     return (
         <Col lg={4} sm={6} className="justify-content-center d-flex">
             <div className={styles.card}>
@@ -31,9 +30,9 @@ export default function Card(props) {
                 <div className={styles.bottom_card}>
                     <div className={styles.title_card}>
                         <div className={styles.title}>{props.title}</div>
-                        <button onClick={() => setToCart(!cart)}>
-                            <FiShoppingBag className={`${styles.iconBag} ${styles.active}`}></FiShoppingBag>
-                            <div className={styles.counter}>{cart.toString()}</div>
+                        <button onClick={() => { setToCart(!cart); props.addToCart([props.shop, !cart]) }}>
+                            <FiShoppingBag className={`${styles.iconBag} ${cart ? styles.active : null}`}></FiShoppingBag>
+                            <div className={props.cart && cart ? styles.counter : styles.none}>{props.cart}</div>
                         </button>
                     </div>
                     <div className={styles.min_price}>
