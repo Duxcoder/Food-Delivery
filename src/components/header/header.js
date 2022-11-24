@@ -8,7 +8,7 @@ import Cart from './cart/cart';
 import { NavigationMobile } from "./navBar/navigationMobile/navigationMobile";
 import ProfileIcon from './profileIcon/profileIcon';
 import { ActiveNavigationMobile } from "./navBar/navigationMobile/navigationMobile";
-
+import { Link } from "react-router-dom";
 const headerPages = [
     {
       name:'Restaurants',
@@ -47,7 +47,7 @@ hamburgerClick = () => {
             <Col className='d-flex justify-content-start align-items-center '>
               <Row className={styles.logoSearch}>
                 <Col xs={3}>
-                  <Logo></Logo>
+                 <Link to = '/'><Logo></Logo></Link> 
                 </Col>
                 <Col xs={9} className={styles.searchBlock}>
                   <Search placeholder='Search'></Search>

@@ -22,9 +22,13 @@ export default function Search(props) {
     }, [])
     return (<>
         <div className={`${styles.search_wrapper} ${props.mobile ? styles.modeSearchMobile : click ? styles.modeSearchActive : styles.modeSearch }`}>
-            <input placeholder={props.placeholder} className={styles.search} onChange={(item) => setSearchText(item.target.value)} onFocus={() => focusSearch()}></input>
+            <input placeholder={props.placeholder} 
+                   className={styles.search} 
+                   onChange={(item) => setSearchText(item.target.value)} 
+                   onFocus={() => focusSearch()}>
+            </input>
             <FiSearch className={styles.icon_search}></FiSearch>
-        {click ? <SearchResult text = {searchText} /> : null}
+        {click ? <SearchResult text = {searchText}/> : null}
 
         </div>
         </>

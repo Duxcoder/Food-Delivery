@@ -5,6 +5,7 @@ import Logo from "../header/logo/logo";
 import horizontalImg from "./img/horizontal.svg"
 import squaredImg from "./img/squared.svg"
 import reviewsImg from "./img/reviews.svg"
+import {Link} from 'react-router-dom'
 
 
 function LoginPage(){
@@ -18,7 +19,9 @@ return (
         <Row>
             <Col xs={{size:3, offset:1}} className={styles.left_block}>
                 <header >
+                    <Link to = '/'>
                     <Logo></Logo>
+                    </Link>
                 </header>
                 <main className="d-flex flex-column justify-content-end" >
                     <div>
